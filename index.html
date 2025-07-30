@@ -117,11 +117,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/images/top-1.jpg"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Given an audio input and a genre-descriptive textual prompt, GCDance generates 3D dance sequences that align well with the musical melody and beat while adhering to the textual instruction.
       </h2>
     </div>
   </div>
@@ -136,7 +136,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            It is a challenging task to generate high-quality full-body dance sequences from music, as this requires strict adherence to genre-specific choreography while ensuring physically realistic and precisely synchronized dance sequences with the music's beats and rhythm. Although significant progress has been made in music-conditioned dance generation, most existing methods struggle to convey specific stylistic attributes in generated dance. To bridge this gap, we propose a diffusion-based framework for genre-specific 3D full-body dance generation, conditioned on both music and descriptive text. To effectively incorporate genre information, we develop a text-based control mechanism that maps input prompts, either explicit genre labels or free-form descriptive text, into genre-specific control signals, enabling precise and controllable text-guided generation of genre-consistent dance motions. Furthermore, to enhance the alignment between music and textual conditions, we leverage the features of a music foundation model, facilitating more coherent and semantically aligned dance synthesis.
+            Last, to balance the objectives of extracting text-genre information and at the same time maintaining high-quality results for dance generation, we propose a novel multi-objective optimization strategy based on multi-task learning, which effectively balances competing factors such as physical realism, spatial accuracy, and text classification. This strategy significantly enhances the overall quality of the generated sequences. Extensive experimental results obtained on FineDance and AIST++ demonstrate the superiority of GCDance over the existing state-of-the-art approaches.
           </p>
         </div>
       </div>
