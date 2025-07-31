@@ -256,29 +256,6 @@
 </section>
 <!-- End video carousel -->
 
-
-  
-<section class="hero is-small">
-  <div class="hero-body">
-    <!-- 放宽容器：也可以用 is-widescreen / is-fullhd / is-fluid -->
-    <div class="container is-max-desktop" style="max-width: 1280px;">
-      <h2 class="title is-3">Genre-Guided Generation</h2>
-
-      <div class="video-grid">
-        <video controls muted playsinline preload="metadata" poster="static/images/poster1.jpg">
-          <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
-        </video>
-
-        <video controls muted playsinline preload="metadata" poster="static/images/poster2.jpg">
-          <source src="static/videos/video2.mp4" type="video/mp4">
-        </video>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
   
 
 <!-- Video carousel -->
@@ -298,7 +275,7 @@
             playsinline
             preload="metadata"
             style="width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; object-fit:cover;">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+            <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
           </video>
         </div>
 
@@ -310,7 +287,7 @@
             playsinline
             preload="metadata"
             style="width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; object-fit:cover;">
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
+            <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
           </video>
         </div>
 
@@ -322,7 +299,7 @@
             playsinline
             preload="metadata"
             style="width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; object-fit:cover;">
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+            <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -330,7 +307,36 @@
   </div>
 </section>
 <!-- End video carousel -->
+<style>
+  #results-carousel .item { padding: 8px; }
+  /* 可选：在小屏只显示1个，更宽；>=1024px显示2个 */
+  @media (min-width: 1024px) {
+    /* 无需改这里，显示数量由 JS 控制的 slidesToShow 决定；这段仅演示可添加自定义样式 */
+  }
+</style>
 
+<!-- 初始化 bulma-carousel：每屏显示2个，视频更大更宽 -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.bulmaCarousel) {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 2,      // 关键：每屏两个，更大更宽
+      infinite: false,
+      autoplay: false,
+      navigation: true,
+      pagination: false,
+      // 可选：响应式断点（小屏显示 1 个）
+      breakpoints: [
+        { changePoint: 768,  slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 1024, slidesToShow: 2, slidesToScroll: 1 }
+      ]
+    });
+  } else {
+    console.warn('bulma-carousel not found. Make sure static/js/bulma-carousel.min.js is loaded.');
+  }
+});
+</script>
 
 
 
