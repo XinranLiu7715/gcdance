@@ -206,43 +206,7 @@
   
 
 <!-- Video carousel -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <!-- 放宽容器：也可以用 is-widescreen / is-fullhd / is-fluid -->
-    <div class="container is-max-desktop" style="max-width: 1280px;">
-      <h2 class="title is-3">Genre-Guided Generation</h2>
 
-      <!-- 轮播：确保这个 id 在整页唯一 -->
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video
-            id="video1"
-            controls
-            muted
-            playsinline
-            preload="metadata"
-            style="width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; object-fit:cover;">
-            <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <div class="item item-video2">
-          <video
-            id="video2"
-            controls
-            muted
-            playsinline
-            preload="metadata"
-            style="width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; object-fit:cover;">
-            <source src="static/dance/test_0_012_slice3.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 <!-- Three Video Side-by-Side -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -297,16 +261,13 @@
 
 
 
-  
+  <!--
 <style>
   #results-carousel .item { padding: 8px; }
-  /* 可选：在小屏只显示1个，更宽；>=1024px显示2个 */
   @media (min-width: 1024px) {
-    /* 无需改这里，显示数量由 JS 控制的 slidesToShow 决定；这段仅演示可添加自定义样式 */
   }
 </style>
 
-<!-- 初始化 bulma-carousel：每屏显示2个，视频更大更宽 -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (window.bulmaCarousel) {
@@ -317,7 +278,6 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: false,
       navigation: true,
       pagination: false,
-      // 可选：响应式断点（小屏显示 1 个）
       breakpoints: [
         { changePoint: 768,  slidesToShow: 1, slidesToScroll: 1 },
         { changePoint: 1024, slidesToShow: 2, slidesToScroll: 1 }
@@ -328,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+  -->
 
 
 
